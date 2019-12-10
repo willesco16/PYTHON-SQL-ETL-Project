@@ -98,7 +98,7 @@ select * from employees
 where hire_date LIKE '1986%'
 ```
 
-3. Manager of each department. Show Results
+3. Manager of each department.
 ```
 select dm.dept_no as "Department Number", 
        d.dept_name as "Department Name", 
@@ -130,7 +130,7 @@ from employees as e
 order by e.emp_no;
 ```
 
-5. Employees whose first name is "Hercules" and last name begins with "B". Show Results
+5. Employees whose first name is "Hercules" and last name begins with "B".
 
 ```
 select * from employees 
@@ -138,7 +138,7 @@ where last_name like 'B%'
 and first_name = 'Hercules';
 ```
 
-6. Employees in the Sales department. Show Results
+6. Employees in the Sales department.
 ```
 select e.emp_no as "Employee Number", 
         e.first_name as "First Name", 
@@ -154,7 +154,7 @@ where d.dept_name = 'Sales'
 order by e.emp_no;
 ```
 
-7. Employees in Sales and Development departments. Show Results
+7. Employees in Sales and Development departments. 
 ```
 select e.emp_no as "Employee Number", 
         e.first_name as "First Name", 
@@ -167,7 +167,7 @@ inner join departments as d
         on d.dept_no = dm.dept_no
 where d.dept_name in ('Sales','Development')
 ```
-8. The frequency of employee last names. Show Results
+8. The frequency of employee last names. 
 ```
 select last_name,
 count (last_name) AS "frequency"
